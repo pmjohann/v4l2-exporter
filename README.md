@@ -17,6 +17,11 @@ If you want to use a different device, just do:
 docker run --rm --device /dev/other-camera:/dev/video0 -v /host/path/to/frames:/frames pmjohann/v4l2-exporter
 ```
 
+### Specifying frame export format
+
+You can change the extension (format) of the exported frames by setting the **EXT** environment variable.
+The default is "png".
+
 ### Debug mode
 
 By default the ffmpeg flag *-loglevel panic* is set. In order to gain debug info, pass the -e DEBUG=1 environment variable.
